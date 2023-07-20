@@ -6,10 +6,6 @@ const { v4: uuid } = require("uuid");
 const app = express();
 
 app.use(express.json());
-// app.use(cors({
-//   origin: 'https://www.exemplo.com',
-//   optionsSuccessStatus: 200
-// }));
 app.use(cors());
 
 const repositories = [];
@@ -128,4 +124,6 @@ app.post("/repositories/:id/like", (request, response) => {
   }
 });
 
-module.exports = app;
+
+
+app.listen(process.env.PORT || 3001);
