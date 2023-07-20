@@ -1,10 +1,16 @@
 const express = require("express");
+const cors = require("cors");
 
 const { v4: uuid } = require("uuid");
 
 const app = express();
 
 app.use(express.json());
+// app.use(cors({
+//   origin: 'https://www.exemplo.com',
+//   optionsSuccessStatus: 200
+// }));
+app.use(cors());
 
 const repositories = [];
 
